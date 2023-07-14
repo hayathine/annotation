@@ -3,6 +3,18 @@ JAVAのSPRINGを使ってアノテーション機能を実装する。
 １．フロントエンドからのリクエストを受け取ってレスポンスを返す。
 ２．データベースを作成してサーバーへのCRUD操作を行う。
 
+StringBuilder
+validate
+autholication
+
+Reader
+文字列ストリームを読み取るためのクラス。テキストファイル等の形式に対応ができる。
+全て読み取った際は-1が返される 
+読み込んだ文字は文字コードなのでchar型に変換する必要がある
+色々調べた結果今回はシンプルにgetParameterを使用することにした。
+BufferReader:一時的に読み取るためのReader
+
+
 @RestController@Controller
 	クラスをコントローラとして認識させている。
 	二つの違いはRestControllerの場合、returnの値がそのままレスポンスのコンテンツになる。

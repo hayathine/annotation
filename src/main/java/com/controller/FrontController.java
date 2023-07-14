@@ -8,24 +8,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.ui.Model;
 
+import com.data.PersonForm;
+
+import org.springframework.ui.Model;
+//ホーム画面、フォーム画面を表示するHTMLに遷移する
 @Controller
 @SpringBootApplication
-public class MainCon{
+public class FrontController{
 	// ホーム画面
 	@RequestMapping("/")
-	String home() {
-		return "Hello World";
+	String shoeHome() {
+		return "home";
 	}
 	
-	//フォーム入力画面
+	//フォーム入力画面への遷移
 	@RequestMapping("form")
 	public String showForm(PersonForm personForm) {
 		return "form";
 	}
 	
 	public static void main(String[] args) {
-		SpringApplication.run(MainCon.class, args);
+		SpringApplication.run(FrontController.class, args);
 	}
 }
